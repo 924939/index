@@ -3,10 +3,37 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<style></style>
-	<script></script>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://cdn.staticfile.org/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+
 </head>
 <body>
-	<h1>你好....</h1>
+
+	<ul id="menu">
+		<li data-menuanchor="page1" class="active"><a href="#page1"></a></li>
+		<li data-menuanchor="page2"><a href="#page2"></a></li>
+	</ul>
+	<div id="fullpage">
+		<div class="nav"></div>
+	    <div class="section secbg">
+
+	        <h3>第一屏</h3>
+	        <a href="#page2">aaaaaaaaaaaaaaaaa</a>
+	    </div>
+	    <div class="section secbg">
+	    </div>
+	</div>
+	<script>
+	$(function(){
+	    $.fn.fullpage({
+			anchors: ['page1','page2'],
+			menu: '#menu'
+		});
+	});
+	</script>
 </body>
 </html>
